@@ -28,4 +28,23 @@ it is perfectly possible to implement support for other protocols,an open-source
  >  **gatling.sh** - If you are on a Mac or Unix machine
 
 4. Gatling will load, and you will be asked to choose a simulation to run
-5. 
+5. Download the Simulation files from the project and copy to the simulation folder
+6. Choose the Simulation Script you wish to run. You will be asked to enter a run description, but this optional and can be left blank
+7. Gatling will go ahead and run the script that you choose - which executes a load test 
+
+## Gatling Results Analysis
+
+At the end of each execution of a Gatling script, a Gatling Results Report is automatically created.
+
+You will see a message in the console about where the report is located, i.e.
+```
+Please open the following file: /Users/jw/Desktop/myGatlingTest/target/gatling/runtimeparameters-20200207112322164/index.html
+```
+## Overall Simulation charts
+1. Global Section-This report shows global or aggregate level information with the total number of requests/responses and the total failed requests/responses at a scenario or simulation level
+2. This chart shows how response times are distributed among standard ranges. The right panel show number of OK/KO requests.
+3. The top panel shows some standard statistics such as min, max, average, standard deviation and percentiles globally and per request.
+4. Response time distribution-displays the distribution of the response times.
+5. Response time percentiles over time-displays a variety of response time percentiles over time, but only for successful requests. As failed requests can end prematurely or be caused by timeouts, they would have a drastic effect on the percentiles computation.
+6. Requests per second over time-displays the number of requests sent per second over time
+7. Responses per second over time-displays the number of responses received per second over time : total, successes and failures.
